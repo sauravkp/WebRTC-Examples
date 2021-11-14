@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   
+  </head>
+
+  <body>
+   
+    
+    <div id="videoElements">
+      
+      <video id="localVideo" autoplay muted style="width:40%;"></video>
+     
+
+      <br />
+
+  </div>
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+ <script>
+     function errorHandler(error) {
+        console.log(error);
+        }
+
+     let constraints = {
+        video: true,
+        audio: true
+    };
+
+     /* START:The camera stream acquisition */
+  if(navigator.mediaDevices.getUserMedia) {
+    navigator.mediaDevices.getUserMedia(constraints).then(getUserMediaSuccess).catch(errorHandler);
+  } else {
+    alert('Your browser does not support getUserMedia API');
+  }
+  function getUserMediaSuccess(stream) {
+    let localVideo = document.getElementById('localVideo');
+    let localStream = stream;
+    localVideo.srcObject = stream;
+  
+    }
+ </script>
+    
+    
+  </body>
+</html>
