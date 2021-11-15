@@ -27,17 +27,18 @@
     };
 
      /* START:The camera stream acquisition */
+    function getUserMediaSuccess(stream) {
+        let localVideo = document.getElementById('localVideo');
+        let localStream = stream;
+        localVideo.srcObject = stream;
+    
+        }
   if(navigator.mediaDevices.getUserMedia) {
     navigator.mediaDevices.getUserMedia(constraints).then(getUserMediaSuccess).catch(errorHandler);
   } else {
     alert('Your browser does not support getUserMedia API');
   }
-  function getUserMediaSuccess(stream) {
-    let localVideo = document.getElementById('localVideo');
-    let localStream = stream;
-    localVideo.srcObject = stream;
   
-    }
  </script>
     
     
