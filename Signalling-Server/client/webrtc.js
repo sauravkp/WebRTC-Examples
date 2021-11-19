@@ -18,7 +18,7 @@ document.getElementById('otherElements').hidden = true;
 var usernameInput = document.querySelector('#usernameInput'); 
 var usernameShow = document.querySelector('#showLocalUserName'); 
 var showAllUsers = document.querySelector('#allUsers');
-var remoteUsernameShow = document.querySelector('#showRemoteUserName');
+
 var loginBtn = document.querySelector('#loginBtn');
 
 // Login when the user clicks the button 
