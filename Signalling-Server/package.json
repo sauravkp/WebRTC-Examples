@@ -1,5 +1,5 @@
 {
-  "name": "WebRTC-signalling-server",
+  "name": "webrtcsignallingserver",
   "version": "1.0.0",
   "description": "An as simple as it gets for a signalling server",
   "main": "index.js",
